@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet">
+    <title>Ideas - Casa Creativa</title>
+</head>
+
+<body id="page-idea">
+    <div id="container">
+        <header>
+            <a href="/">
+                <img src="/Imgur.png" alt="logo">
+            </a>
+            <nav>
+                <li><a href="/">Home</a></li>
+                <li><a class="button" onclick="onOff()" href="#">Nova Ideas</a></li>
+            </nav>
+        </header>
+        <section id="title">
+            <p>Em exibição</p>
+            <h1>Ideias</h1>
+        </section>
+        <main>
+            <section id="ideas">
+                {%for idea in ideas%}
+                <div class="idea">
+                    <img src="{{idea.img}}" alt="{{idea.title}}">
+                    <div class="content">
+                        <h3>{{idea.title}}</h3>
+                        <p>{{idea.category}}</p>
+                        <div class="description">
+                            {{idea.description}}
+                        </div>
+                        <a href="idea.url" target="_blankdccd                                            aa">Ir para
+                            idea</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </section>
+        </main>
+        <footer>
+            <p id="footer">Com 💓 Rocketseat </p>
+        </footer>
+    </div>
+   {% include "modal.html" %}
+    <script src="/main.js"></script>
+</body>
+
+</html>

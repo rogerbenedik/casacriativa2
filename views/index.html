@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div id="container">
+    <section id="intro">
+        <header>
+            <img src="/Imgur.png" alt="logo">
+        </header>
+        <main>
+            <p>Fica em casa em periodo longos, não deve ser nada fácil.</p>
+            <p>Por isso, iremos catologar ideas <strong>Brincadeiras, jogos, filmes, livros,
+                    cursos,dicas</strong> e tudo que for necessario para torna esse momento mais interresente.</p>
+            <p>começe cliclado em verver ideas para ver ideas cadastrada
+                e contribuia adicionado a sua idea</p>
+            <section id="buttons">
+                <button onclick="onOff()">+ adicionar ideas</button>
+                <a href="/ideas" class="button">Ver Ideas</a>
+            </section>
+            <footer>
+                <p id="footer">Com 💓 Rocketse at </p>
+            </footer>
+        </main>
+    </section>
+    <section id="last-ideas">
+        {% include "wholeIdeas.html" %}
+    </section>
+</div>
+{%endblock %}
